@@ -25,8 +25,8 @@ class AgencyRequest extends FormRequest
     {
         return [
             'name' => 'required|min:5',
-            'phone' => 'required',
-            'email' => 'required|email',
+            'phone' => 'required|min:10|unique:agents,phone',
+            'email' => 'required|email|unique:agents,email',
             'address' => 'required',
             'manager' => 'required',
         ];
@@ -38,7 +38,10 @@ class AgencyRequest extends FormRequest
             'name.required' => 'Không được để trống',
             'name.min' => 'Ít nhất 5 kí tự',
             'phone.required' => 'Không được để trống',
+            'phone.min' => 'Số điện thoại ít nhất 10 kí tự',
+            'phone.unique' => 'Số điện thoại đã tồn tại',
             'email.required' => 'Không được để trống',
+            'email.unique' => 'Email đã tồn tại',
             'address.required' => 'Không được để trống',
             'manager.required' => 'Không được để trống'
         ];

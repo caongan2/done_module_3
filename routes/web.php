@@ -21,5 +21,5 @@ Route::prefix('/agency')->group(function (){
     Route::get('delete/{id}', [\App\Http\Controllers\AgencyController::class, 'destroy'])->name('delete');
     Route::get('edit/{id}', [\App\Http\Controllers\AgencyController::class, 'edit'])->name('edit');
     Route::post('update/{id}', [\App\Http\Controllers\AgencyController::class, 'update'])->name('update');
-    Route::post('search', [\App\Http\Controllers\AgencyController::class, 'search'])->name('search');
+    Route::get('search', [\App\Http\Controllers\AgencyController::class, 'search'])->name('search');
 });

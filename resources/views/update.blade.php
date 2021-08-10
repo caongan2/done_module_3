@@ -25,7 +25,7 @@
                     <a class="nav-link" href="{{route('create')}}">Thêm mới</a>
                 </li>
             </ul>
-            <form method="post" action="{{route('search')}}" class="d-flex">
+            <form method="get" action="{{route('search')}}" class="d-flex">
                 @csrf
                 <input class="form-control me-2" type="search" name="name" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>

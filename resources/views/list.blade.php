@@ -26,7 +26,7 @@
                     <a class="nav-link" href="{{route('create')}}">Thêm mới</a>
                 </li>
             </ul>
-            <form method="post" action="{{route('search')}}" class="d-flex">
+            <form method="get" action="{{route('search')}}" class="d-flex">
                 @csrf
                 <input class="form-control me-2" type="search" name="name" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -59,7 +59,7 @@
             <td>{{$agency->status}}</td>
             <td>
                 <a href="{{route('edit', $agency->id)}}" class="btn btn-primary">Update</a>
-                <a href="{{route('delete', $agency->id)}}" class="btn btn-danger">Delete</a>
+                <a href="{{route('delete', $agency->id)}}" onclick="return confirm('Are you sure???')" class="btn btn-danger">Delete</a>
             </td>
         </tr>
     @endforeach
