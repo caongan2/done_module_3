@@ -29,8 +29,7 @@ class AgencyController extends Controller
      */
     public function create()
     {
-        $status = Status::all();
-        return view('create', compact('status'));
+        return view('create');
     }
 
     /**
@@ -70,9 +69,8 @@ class AgencyController extends Controller
      */
     public function edit($id)
     {
-        $status = Status::all();
         $agency = Agency::findOrFail($id);
-        return view('update', compact('agency', 'status'));
+        return view('update', compact('agency'));
     }
 
     /**

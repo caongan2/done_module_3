@@ -22,14 +22,13 @@ class AgencyFactory extends Factory
      */
     public function definition()
     {
-        $status = Status::pluck('id')->toArray();
         return [
             'name' => $this->faker->name(),
             'phone' => $this->faker->numberBetween(),
             'email' => $this->faker->email(),
             'address' => $this->faker->address(),
             'manager' => $this->faker->name(),
-            'status' => $this->faker->randomElement($status)
+            'status' => $this->faker->name()
         ];
     }
 }

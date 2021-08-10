@@ -92,9 +92,8 @@
                 <label class="col-sm-2 col-form-label">Status</label>
                 <div class="col-sm-10 ">
                     <select name="status" id="">
-                        @foreach($status as $item)
-                        <option value="{{$item->id}}">{{$item->status}}</option>
-                        @endforeach
+                        <option value="Hoạt động">Hoạt động</option>
+                        <option value="Ngừng hoạt động">Ngừng hoạt động</option>
                     </select>
 
                 </div>

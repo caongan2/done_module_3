@@ -20,6 +20,7 @@ class CreateAgentsTable extends Migration
             $table->string('email');
             $table->string('address');
             $table->string('manager');
+            $table->string('status');
             $table->timestamps();
         });
     }
